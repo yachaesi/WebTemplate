@@ -1,0 +1,802 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    box-sizing: border-box;
+    transition: all 0.3s;
+}
+
+/* font */
+@font-face {
+    font-family: 'Noto Sans KR';
+    src: url("font/NotoSansKR-Regular.otf") format('Opentype');
+
+}
+
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    box-sizing: border-box;
+}
+
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+}
+
+header {
+    width: 100%;
+    height: 70px;
+    background-color: #3FAC6D;
+    color: white;
+    position: sticky;
+    z-index: 99;
+}
+header .container{
+    height: 100%;
+}
+header .container .row{
+    height: 100%;
+}
+
+header .search {
+    box-sizing: border-box;
+    color: #fff;
+}
+
+header .search input {
+    height: 40px;
+    border-radius: 7px;
+    background-color: #3FAC6D;
+    border: 2px solid #fff;
+    padding: 0 15px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+header .search input::placeholder {
+    color: #fff;
+}
+header .search input:focus{
+    color: #fff;
+}
+header .search button {
+    background: #3FAC6D;
+    border: none;
+    position: absolute;
+    display: block;
+    margin: auto;
+    top: 9px;
+    right: 40px;
+}
+
+header .search button img {
+    filter: invert(100%);
+    width: 23px;
+}
+
+header h1 img {
+    width: 4rem;
+    display: block;
+    margin: auto;
+}
+header ul{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
+}
+
+header ul li a {
+    color: #fff;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+header .icon{
+    display: none;
+}
+header .icon i{
+    font-size: 1.3rem;
+}
+
+.slide {
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide .slide_img {
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    position: absolute;
+}
+
+.slide img {
+    max-width: 100%;
+    filter: brightness(60%);
+}
+
+.slide .text {
+    margin-top: 7%;
+    text-align: center;
+    align-items: center;
+    color: #fff;
+}
+
+.slide .text h3 {
+    font-weight: 700;
+    font-size: 40px;
+    margin: 30px 0;
+}
+
+.slide .text p {
+    font-size: 16px;
+}
+
+.slide .btn_farm {
+    margin-top: 20px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgba(238, 114, 112, 0.6);
+}
+
+/* main */
+main #quick {
+    margin: auto;
+    margin: 50px 0;
+}
+
+main #quick .container {
+    height: 400px;
+    margin-top: 150px;
+}
+
+main #quick img {
+    width: 80%;
+    margin-right: 50px;
+}
+
+main #quick .text {
+    align-items: center;
+}
+
+main #quick .text p {
+    font-weight: 500;
+}
+
+main #quick .text h4 {
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 42px;
+}
+
+main #quick .text h4 span {
+    color: #ee7270;
+}
+
+main #quick .btn_quick {
+    color: #fff;
+    font-weight: 600;
+    margin-top: 20px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #3FAC6D;
+}
+
+/* today */
+#today .top_today {
+    margin: auto;
+}
+
+#today .top_today img {
+    width: 100%
+}
+
+#today .top_today h2 {
+    margin-top: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+#today .top_today h2 span {
+    color: #ee7270;
+}
+
+#today .fruit {
+    text-align: center;
+    margin: 60px 0 0 0;
+}
+
+#today h3 {
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+#today a {
+    font-weight: 700;
+    font-size: 14px;
+    color: #9E9E9E;
+}
+
+#today .goods {
+    width: 100%;
+    margin: auto;
+}
+
+#today .goods .thumbnail {
+    width: 95%;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+#today .goods .thumbnail img {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+#today .descript .category {
+    font-size: 14px;
+    font-weight: 400;
+    color: #9E9E9E;
+
+}
+
+#today .descript .name a {
+    width: 270px;
+    overflow: hidden;
+    font-weight: 700;
+    font-size: 1rem;
+    color: black;
+}
+
+#today .descript .price {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.b_box {
+    margin-bottom: 75px;
+}
+
+#today .box {
+    padding: 0;
+}
+
+/* banner */
+#banner {
+    margin-top: 30px;
+    height: 140px;
+    overflow: hidden;
+    position: relative;
+    bottom: 0;
+}
+
+#banner img {
+    width: 100%;
+}
+
+/* review */
+#review {
+    overflow: hidden;
+    background-color: #F3F9F0;
+}
+
+#review h2 {
+    margin-top: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+#review h2 span {
+    color: #3fac6d;
+}
+
+#review .title {
+    padding-top: 75px;
+    margin-bottom: 100px;
+}
+
+#review .re_box {
+    overflow: hidden;
+    padding: 0;
+    margin-bottom: 50px;
+}
+
+#review .re_box .thumbnail {
+    height: 170px;
+    border-radius: 15px 15px 0 0;
+    overflow: hidden;
+}
+
+#review .re_box .thumbnail img {
+    width: 100%;
+    position: relative;
+    left: 0;
+    top: -100px;
+}
+
+#review .re_box .review_text {
+    padding: 25px 20px;
+    box-sizing: border-box;
+}
+
+#review .re_box .review_text h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#review .re_box .review_text span {
+    font-size: 14px;
+}
+
+.rbox {
+    display: block;
+    overflow: hidden;
+    width: 95%;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 15px;
+
+}
+
+/* 리뷰왕 king */
+#king {
+    width: 100%;
+    background-color: #3FAC6D;
+    overflow: hidden;
+}
+
+#king .top_king {
+    text-align: center;
+    margin: auto;
+    padding-top: 75px;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+#king .top_king h2 {
+    font-weight: 700;
+
+}
+
+#king .king_name {
+    width: 100%;
+    margin: auto;
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+
+#king .king_name img {
+    width: 100%;
+}
+
+#insta {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+#insta .top_insta {
+    margin: auto;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#insta .insta_post {
+    width: 100%;
+}
+
+#insta .insta_post img {
+    width: 100%;
+}
+
+#insta .top_insta h2 {
+    margin-top: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+#insta .top_insta span {
+    color: #ee7270;
+    font-weight: 600;
+}
+
+#insta .top_insta p {
+    margin-top: 10px;
+    color: #9E9E9E;
+    text-decoration-line: underline;
+
+}
+
+footer {
+    border-top: 1px solid #3FAC6D;
+}
+
+footer .logo {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+footer .logo a {
+    width: 130px;
+    display: flex;
+}
+
+footer .logo img {
+    width: 40%;
+    height: 40%;
+}
+
+footer .logo p {
+    margin-left: 10px;
+    font-size: 25px;
+    font-weight: 700;
+    color: #666666;
+}
+
+footer .footer_discript {
+    color: #9E9E9E;
+    font-size: 14px;
+    line-height: 30px;
+}
+
+footer .info {
+    color: #9E9E9E;
+    line-height: 50px;
+}
+
+footer .info a:hover {
+    color: #9E9E9E;
+    text-decoration: underline;
+}
+
+footer .customer {
+    color: #9E9E9E;
+    line-height: 50px;
+}
+
+footer .kr{
+    margin-bottom: 10px;
+}
+footer .kr img {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    width: 10rem;
+    filter: contrast(30%);
+}
+
+footer .copy {
+    color: #999999;
+    font-size: 14px;
+}
+
+@media screen and (min-width:992px) and (max-width:1200px) {
+
+    header .search input {
+        width: 100%;
+    }
+
+    header .search button {
+        right: 30px;
+    }
+
+    header ul li {
+        padding-left: 20px;
+        margin: 0;
+    }
+
+    header h1 img{
+        width: 3rem;
+    }
+    .slide {
+        height: 400px;
+    }
+
+    .slide img {
+        width: 130%;
+        top: -150px;
+    }
+
+    #banner {
+        display: none;
+    }
+
+
+
+    #king .king_name img {
+        width: 400px;
+        margin-bottom: 10px;
+    }
+
+
+}
+
+@media screen and (min-width:768px) and (max-width:991px) {
+
+    
+    header .search input {
+        width: 180px;
+    }
+
+    header .search button {
+        display: none;
+    }
+
+    header ul li{
+        padding-right: 15px;
+    }
+    
+    header h1 img{
+        width: 4rem;
+        display: block;
+        margin: auto;
+    }
+    .slide {
+        height: 40vw;
+    }
+
+    .slide img {
+        top: -80px;
+    }
+
+    #today .box {
+        margin-bottom: 40px;
+    }
+
+    #banner {
+        display: none;
+    }
+
+    #review .rbox {
+        margin-bottom: 20px;
+    }
+
+
+}
+
+
+@media screen and (min-width:576px) and (max-width:767px) {
+
+
+    header .search button{
+        position: static;
+    }
+
+    header h1{
+        margin: auto;
+    }
+    header h1 img{
+        width: 4rem;
+    }
+
+  
+    .slide {
+        height: 55vw;
+    }
+    .slide .text h3{
+        font-size: 1.5rem;
+    }
+    .slide img {
+
+        top: -80px;
+    }
+
+
+    #banner {
+        display: none;
+    }
+  
+ 
+}
+
+@media screen and (max-width:767px) {
+  
+    header .menu_side{
+        display: none!important ;
+    }
+  
+
+    header .search input {
+        display: none;
+    }
+
+    header .search button{
+        top: 0;
+
+    }
+    header .icon{
+        display: flex;
+    }
+    
+    
+    main #quick .container {
+        margin-top: 0px;
+
+    }
+
+    main #quick .content {
+        flex-direction: column;
+        margin: auto;
+    }
+
+    main #quick img {
+        width: 40%;
+        margin: auto;
+    }
+
+    main #quick .text {
+        text-align: center;
+    }
+
+    main #quick .text p {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    main #quick .text br {
+        display: none;
+    }
+
+    #today .box{
+        margin-bottom: 15px;
+    }
+
+    footer .info{
+        line-height: 40px;
+    }
+    footer .customer{
+        line-height: 40px;
+    }
+}
+
+
+@media screen and (min-width:395px) and (max-width:575px) {
+    header .search button {
+        position: static;
+        display: block;
+        margin: auto;
+    }
+
+    header h1 img{
+        width: 3.6rem;
+        display: block;
+        margin: auto;
+    }
+    header .icon i{
+        font-size: 20px;
+    }  
+    header .search input{
+        display: none;
+    }
+    header ul{
+        display: none;
+    }
+
+    .slide{
+        height: 70vw;
+    }
+    .slide img{
+        max-width: 130%;
+    }
+    .slide .text h3{
+        font-size: 1.5rem;
+    }
+    .slide .text p{
+        font-size: 0.8rem;
+    }
+    .slide .text p br{
+        display: none;
+    }
+  
+    .slide img {
+        top: -100px;
+    }
+
+    main #quick .text h4{
+        font-size: 1.8rem;
+    }
+    #today .descript .category{
+        font-size: 0.7rem;
+    }
+    #today .descript .name a{
+        font-size: 0.9rem;
+    }
+
+    #review .re_box{
+        margin: auto;
+        margin-bottom: 30px;
+    }
+    #banner {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width:394px) {
+    header .search button {
+        position: static;
+        display: block;
+        margin: auto;
+    }
+
+    header h1 img{
+        width: 3rem;
+        display: block;
+        margin: auto;
+    }
+
+    .slide{
+        height: 70vw;
+    }
+    .slide img{
+        max-width: 130%;
+    }
+
+    .slide .text h3{
+        font-size: 1.5rem;
+    }
+    .slide .text p{
+        font-size: 0.8rem;
+    }
+
+    .slide .text p br{
+        display: none;
+    }
+    main #quick .text h4{
+        font-size: 1.8rem;
+    }
+    main #quick .btn_quick{
+        width: 300px;
+        margin: auto;
+        margin-top: 30px;
+    }
+
+    #today .top_today h2{
+        font-size: 1.5rem;
+    }
+    #today h3{
+        font-size: 1.3rem;
+    }
+    #today .descript .category{
+        font-size: 0.7rem;
+    }
+
+    #today .descript .name a{
+        font-size: 0.9rem;
+    }
+    #review h2{
+        font-size: 1.5rem;
+    }
+    #review .title{
+        margin-bottom: 50px;
+    }
+    #banner {
+        display: none;
+    }
+
+    #king .top_king h2{
+        font-size: 1.5rem;
+    }
+    #king .top_king span{
+        font-size: 1rem;
+    }
+    #insta .top_insta h2{
+        font-size: 1.5rem;
+    }
+}
